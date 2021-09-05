@@ -19,4 +19,5 @@ The following guides illustrate how to use some features concretely:
 * [Building REST services with Spring](https://spring.io/guides/tutorials/bookmarks/)
 
 ### Tutorial
-[YouTube](https://www.youtube.com/watch?v=c3gKseNAs9w&ab_channel=DailyCodeBuffer)
+[YouTube](https://www.youtube.com/watch?v=c3gKseNAs9w&ab_channel=DailyCodeBuffer)  
+JPA Query Documentation : https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods
