@@ -1,6 +1,7 @@
 package com.manish.springdemo.service;
 
 import com.manish.springdemo.entity.Department;
+import com.manish.springdemo.error.DepartmentNotFoundException;
 
 import java.util.List;
 
@@ -11,7 +12,7 @@ public interface DepartmentService {
 
     public void deleteDepartmentById(Long departmentId);
 
-    public Department fetchDepartmentById(Long departmentId);
+    public Department fetchDepartmentById(Long departmentId) throws DepartmentNotFoundException;
 
     public Department updateDepartment(Long departmentId, Department department);
 

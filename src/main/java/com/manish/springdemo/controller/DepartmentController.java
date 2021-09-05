@@ -1,6 +1,7 @@
 package com.manish.springdemo.controller;
 
 import com.manish.springdemo.entity.Department;
+import com.manish.springdemo.error.DepartmentNotFoundException;
 import com.manish.springdemo.service.DepartmentService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -31,7 +32,7 @@ public class DepartmentController {
     }
 
     @GetMapping("/departments/{id}")
-    public Department fetchDepartmentById(@PathVariable("id") Long departmentId) {
+    public Department fetchDepartmentById(@PathVariable("id") Long departmentId) throws DepartmentNotFoundException {
         LOGGER.info("Inside the fetch Department by Id for "+departmentId);
         return departmentService.fetchDepartmentById(departmentId);
     }
