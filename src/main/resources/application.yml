@@ -1,0 +1,53 @@
+server:
+  port: 8080
+spring:
+  profiles:
+    active: prod
+---
+spring:
+  profiles: dev
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springdemo
+    username: manish
+    password: 12345678
+  jpa:
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+welcome:
+  message: Hello Everyone to Spring [DEV]!!
+
+
+---
+spring:
+  profiles: qa
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springdemoqa
+    username: manish
+    password: 12345678
+  jpa:
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+welcome:
+  message: Hello Everyone to Spring [QA]!!
+
+---
+spring:
+  profiles: prod
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springdemoprod
+    username: manish
+    password: 12345678
+  jpa:
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+welcome:
+  message: Hello Everyone to Spring [PROD]!!
