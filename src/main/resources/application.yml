@@ -2,7 +2,7 @@ server:
   port: 8080
 spring:
   profiles:
-    active: prod
+    active: qa
 ---
 spring:
   profiles: dev
@@ -35,6 +35,12 @@ spring:
     show-sql: true
 welcome:
   message: Hello Everyone to Spring [QA]!!
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        exclude: "env,beans"
 
 ---
 spring:
