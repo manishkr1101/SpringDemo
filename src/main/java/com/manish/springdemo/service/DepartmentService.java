@@ -6,7 +6,7 @@ import com.manish.springdemo.error.DepartmentNotFoundException;
 import java.util.List;
 
 public interface DepartmentService {
-    public void saveDepartment(Department department);
+    public Department saveDepartment(Department department);
 
     public List<Department> getDepartments();
 

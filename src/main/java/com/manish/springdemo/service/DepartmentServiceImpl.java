@@ -17,8 +17,9 @@ public class DepartmentServiceImpl implements DepartmentService{
     private DepartmentRepository departmentRepository;
 
     @Override
-    public void saveDepartment(Department department) {
+    public Department saveDepartment(Department department) {
         departmentRepository.save(department);
+        return department;
     }
 
     @Override
